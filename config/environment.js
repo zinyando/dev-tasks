@@ -4,8 +4,19 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dev-tasks',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'github-oauth2': {
+          appId: 'xxxxx-some-app-id',
+          scope: 'email,user_birthday'
+        }
+      }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

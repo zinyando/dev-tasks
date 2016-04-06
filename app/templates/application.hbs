@@ -1,3 +1,15 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container">
 
-{{outlet}}
+<div class="masthead">
+  <h3 class="text-muted">Dev Tasks</h3>
+  <nav>
+    <ul class="nav nav-justified">
+      <li>{{#link-to 'site'}}Home{{/link-to}}</li>
+      <li>{{#link-to 'login'}}Login{{/link-to}}</li>
+      <li>{{#link-to 'admin'}}Admin{{/link-to}}</li>
+    </ul>
+  </nav>
+</div>
+
+  {{outlet}}
+</div>
